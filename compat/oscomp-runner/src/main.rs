@@ -10,6 +10,7 @@ mod fs;
 mod myfs;
 
 use ext4_import::ImportStats;
+use std::string::String;
 
 const IMPORT_ROOT: &str = "/ext4";
 
@@ -41,7 +42,7 @@ fn print_root_entries() {
         Ok(entries) => {
             for entry in entries {
                 match entry {
-                    Ok(entry) => println!("  {}", entry.file_name().to_string_lossy()),
+                    Ok(entry) => println!("  {}", entry.file_name()),
                     Err(err) => println!("  <read dir entry error: {err}>"),
                 }
             }

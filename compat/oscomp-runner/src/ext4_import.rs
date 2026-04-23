@@ -1,10 +1,10 @@
 use crate::fs;
 use crate::myfs;
+use core::error::Error;
+use core::fmt;
 use ext4_view::{Ext4, Ext4Read};
 use std::boxed::Box;
-use std::error::Error;
-use std::fmt;
-use std::string::{String, ToString};
+use std::string::String;
 use std::sync::{Arc, Mutex};
 
 #[derive(Default, Debug, Clone, Copy)]
@@ -35,7 +35,7 @@ impl Ext4Read for DiskReader {
         start_byte: u64,
         dst: &mut [u8],
     ) -> Result<(), Box<dyn Error + Send + Sync + 'static>> {
-        let mut disk = self.disk.lock().unwrap();
+        let mut disk = self.disk.lock();
         disk.set_position(start_byte);
 
         let mut filled = 0;

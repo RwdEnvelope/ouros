@@ -1,0 +1,12 @@
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/axio-d2b3e02297cf1dda.d: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/buffered/mod.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/buffered/bufreader.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/error.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/impls.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/prelude.rs
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libaxio-d2b3e02297cf1dda.rlib: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/buffered/mod.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/buffered/bufreader.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/error.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/impls.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/prelude.rs
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libaxio-d2b3e02297cf1dda.rmeta: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/buffered/mod.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/buffered/bufreader.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/error.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/impls.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/prelude.rs
+
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/lib.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/buffered/mod.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/buffered/bufreader.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/error.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/impls.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axio-0.2.1/src/prelude.rs:

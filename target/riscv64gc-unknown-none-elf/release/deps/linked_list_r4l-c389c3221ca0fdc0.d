@@ -1,0 +1,10 @@
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/linked_list_r4l-c389c3221ca0fdc0.d: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/linked_list.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/raw_list.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/../README.md
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/liblinked_list_r4l-c389c3221ca0fdc0.rlib: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/linked_list.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/raw_list.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/../README.md
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/liblinked_list_r4l-c389c3221ca0fdc0.rmeta: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/linked_list.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/raw_list.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/../README.md
+
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/lib.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/linked_list.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/raw_list.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linked_list_r4l-0.3.0/src/../README.md:

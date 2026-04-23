@@ -1,0 +1,11 @@
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/axfs_devfs-ceafdc0de3af308c.d: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/dir.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/null.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/urandom.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/zero.rs
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libaxfs_devfs-ceafdc0de3af308c.rlib: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/dir.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/null.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/urandom.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/zero.rs
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libaxfs_devfs-ceafdc0de3af308c.rmeta: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/dir.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/null.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/urandom.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/zero.rs
+
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/lib.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/dir.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/null.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/urandom.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axfs_devfs-0.1.2/src/zero.rs:

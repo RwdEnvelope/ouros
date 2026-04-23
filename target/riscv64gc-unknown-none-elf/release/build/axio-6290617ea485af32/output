@@ -1,0 +1,3 @@
+cargo:rustc-check-cfg=cfg(borrowedbuf_init)
+cargo:rerun-if-changed=build.rs
+cargo:rustc-cfg=borrowedbuf_init

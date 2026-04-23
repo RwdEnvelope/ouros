@@ -1,0 +1,21 @@
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/axstd-155f40ac8ca24922.d: /home/reden/os_competition/ouros/arceos/ulib/axstd/src/lib.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/macros.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/env.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/io/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/io/stdio.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/os.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/process.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/sync/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/sync/mutex.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/thread/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/thread/multi.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/time.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/dir.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/file.rs
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libaxstd-155f40ac8ca24922.rlib: /home/reden/os_competition/ouros/arceos/ulib/axstd/src/lib.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/macros.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/env.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/io/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/io/stdio.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/os.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/process.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/sync/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/sync/mutex.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/thread/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/thread/multi.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/time.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/dir.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/file.rs
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libaxstd-155f40ac8ca24922.rmeta: /home/reden/os_competition/ouros/arceos/ulib/axstd/src/lib.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/macros.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/env.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/io/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/io/stdio.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/os.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/process.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/sync/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/sync/mutex.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/thread/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/thread/multi.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/time.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/mod.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/dir.rs /home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/file.rs
+
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/lib.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/macros.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/env.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/io/mod.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/io/stdio.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/os.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/process.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/sync/mod.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/sync/mutex.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/thread/mod.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/thread/multi.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/time.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/mod.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/dir.rs:
+/home/reden/os_competition/ouros/arceos/ulib/axstd/src/fs/file.rs:

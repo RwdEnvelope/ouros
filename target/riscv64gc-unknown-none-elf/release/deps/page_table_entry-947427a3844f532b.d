@@ -1,0 +1,10 @@
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/page_table_entry-947427a3844f532b.d: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/arch/mod.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/arch/riscv.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/../README.md
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libpage_table_entry-947427a3844f532b.rlib: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/arch/mod.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/arch/riscv.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/../README.md
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libpage_table_entry-947427a3844f532b.rmeta: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/arch/mod.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/arch/riscv.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/../README.md
+
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/lib.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/arch/mod.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/arch/riscv.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/page_table_entry-0.6.1/src/../README.md:

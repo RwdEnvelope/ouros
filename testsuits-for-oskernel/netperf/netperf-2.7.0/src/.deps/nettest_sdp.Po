@@ -1,4 +1,5 @@
-nettest_sdp.o: nettest_sdp.c /usr/riscv64-linux-gnu/include/stdc-predef.h \
+nettest_sdp.o: nettest_sdp.c \
+ /home/reden/opt/riscv64-linux-musl-cross/riscv64-linux-musl/include/stdc-predef.h \
  ../config.h
-/usr/riscv64-linux-gnu/include/stdc-predef.h:
+/home/reden/opt/riscv64-linux-musl-cross/riscv64-linux-musl/include/stdc-predef.h:
 ../config.h:

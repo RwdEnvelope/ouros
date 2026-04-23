@@ -1,0 +1,11 @@
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/memory_set-b6bb2dcaf1f32ded.d: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/area.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/backend.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/set.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/../README.md
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libmemory_set-b6bb2dcaf1f32ded.rlib: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/area.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/backend.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/set.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/../README.md
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libmemory_set-b6bb2dcaf1f32ded.rmeta: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/area.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/backend.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/set.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/../README.md
+
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/lib.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/area.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/backend.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/set.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_set-0.4.1/src/../README.md:

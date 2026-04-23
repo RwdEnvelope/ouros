@@ -1,0 +1,11 @@
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/axsched-daaaee3608387f6a.d: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/cfs.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/fifo.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/round_robin.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/../README.md
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libaxsched-daaaee3608387f6a.rlib: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/cfs.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/fifo.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/round_robin.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/../README.md
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libaxsched-daaaee3608387f6a.rmeta: /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/lib.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/cfs.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/fifo.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/round_robin.rs /home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/../README.md
+
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/lib.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/cfs.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/fifo.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/round_robin.rs:
+/home/reden/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axsched-0.3.1/src/../README.md:

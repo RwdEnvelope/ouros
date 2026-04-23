@@ -27,11 +27,12 @@ build-kernel:
 		echo "supported arches: $(SUPPORTED_ARCHES)"; \
 		exit 1; \
 	fi
-	@rm -f "$(ROOT)"/compat/oscomp-runner/oscomp-runner_*.elf "$(ROOT)/$(output)"
+	@rm -f "$(ROOT)"/compat/oscomp-runner/oscomp-runner_*.elf "$(ROOT)"/compat/oscomp-runner/oscomp-runner_*.bin "$(ROOT)/$(output)"
 	@"$(BUILD_RUNNER)" "$(arch)" build
-	@src="$$(ls -t "$(ROOT)"/compat/oscomp-runner/oscomp-runner_*.elf 2>/dev/null | head -n 1)"; \
+	@if [ "$(arch)" = "riscv64" ]; then ext=bin; else ext=elf; fi; \
+	src="$$(ls -t "$(ROOT)"/compat/oscomp-runner/oscomp-runner_*.$$ext 2>/dev/null | head -n 1)"; \
 	if [ -z "$$src" ]; then \
-		echo "unable to locate built ELF under compat/oscomp-runner/"; \
+		echo "unable to locate built $$ext image under compat/oscomp-runner/"; \
 		exit 1; \
 	fi; \
 	cp "$$src" "$(ROOT)/$(output)"; \

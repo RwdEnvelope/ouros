@@ -307,20 +307,135 @@ EOF
     echo "warning: ./busybox is missing and host busybox was not found" >&2
 }
 
+print_single_suite_summary() {
+    local suite_name="$1"
+    local log_file="$2"
+    local script_file="$3"
+    local rc="$4"
+    local summary
+
+    summary="$(python3 - "$suite_name" "$log_file" "$script_file" "$rc" <<'PY'
+import pathlib
+import re
+import sys
+from collections import Counter
+
+suite_name = sys.argv[1]
+log_path = pathlib.Path(sys.argv[2])
+script_path = pathlib.Path(sys.argv[3])
+rc = int(sys.argv[4])
+text = log_path.read_text(errors="ignore")
+
+pass_count = 0
+fail_count = 0
+
+def estimate_script_case_count(path: pathlib.Path) -> int:
+    if not path.exists():
+        return 0
+
+    count = 0
+    inside_function = False
+    skip_words = {
+        "cd", "echo", "kill", "wait", "return", "export", "unset", "local",
+        "if", "then", "else", "elif", "fi", "for", "do", "done", "case",
+        "esac", "while", "in",
+    }
+
+    for raw_line in path.read_text(errors="ignore").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line in {"{", "}"}:
+            if line == "}":
+                inside_function = False
+            continue
+        if re.match(r"^[A-Za-z_][A-Za-z0-9_]*\s*\(\)\s*\{$", line):
+            inside_function = True
+            continue
+        if inside_function:
+            continue
+        if "OS COMP TEST GROUP" in line:
+            continue
+        if line.startswith("./busybox echo") or line.startswith("busybox echo") or line.startswith("echo "):
+            continue
+        if re.match(r"^[A-Za-z_][A-Za-z0-9_]*=.*$", line) and not line.startswith("./"):
+            continue
+        first_word = re.split(r"\s+", line, maxsplit=1)[0]
+        if first_word in skip_words:
+            continue
+        if line.startswith("./") or re.match(r"^(?:[A-Za-z_][A-Za-z0-9_]*=\S+\s+)*\./", line):
+            count += 1
+            continue
+        if re.match(r"^[A-Za-z_][A-Za-z0-9_]*\b", first_word):
+            count += 1
+
+    return count
+
+testcase_pass = re.findall(rf"^testcase\s+{re.escape(suite_name)}\b.*\bsuccess\s*$", text, flags=re.M)
+testcase_fail = re.findall(rf"^testcase\s+{re.escape(suite_name)}\b.*\bfail(?:ed)?\b.*$", text, flags=re.M | re.I)
+pass_count += len(testcase_pass)
+fail_count += len(testcase_fail)
+
+group_pass = re.findall(rf"^======\s+{re.escape(suite_name)}\b.*\bend:\s+success\s+======\s*$", text, flags=re.M | re.I)
+group_fail = re.findall(rf"^======\s+{re.escape(suite_name)}\b.*\bend:\s+fail(?:ed)?\b.*$", text, flags=re.M | re.I)
+pass_count += len(group_pass)
+fail_count += len(group_fail)
+
+started_cases = re.findall(r"^=+\s+START\s+(test_[^\s=]+)\s+=+\s*$", text, flags=re.M)
+ended_cases = re.findall(r"^=+\s+END\s+(test_[^\s=]+)\s+=+\s*$", text, flags=re.M)
+if started_cases:
+    started_counter = Counter(started_cases)
+    ended_counter = Counter(ended_cases)
+    started_total = sum(started_counter.values())
+    matched_total = sum(min(started_counter[name], ended_counter[name]) for name in started_counter)
+    pass_count += matched_total
+    fail_count += started_total - matched_total
+
+if pass_count == 0 and fail_count == 0:
+    estimated_total = estimate_script_case_count(script_path)
+    if estimated_total > 0 and rc == 0:
+        pass_count = estimated_total
+    elif estimated_total > 0 and rc != 0:
+        fail_count = estimated_total
+    elif rc == 0:
+        pass_count = 1
+    else:
+        fail_count = 1
+
+total = pass_count + fail_count
+print(f"==== single suite summary: suite={suite_name} total={total} passed={pass_count} failed={fail_count} ====")
+PY
+)"
+    echo "$summary"
+}
+
 run_single_suite() {
     local suite_name="$1"
     local suite_root
+    local log_file
+    local script_file
+    local rc
     suite_root="$(get_suite_root)"
+    script_file="$suite_root/${suite_name}_testcode.sh"
     if ! prepare_suite_root "$suite_name"; then
         echo "==== suite preparation failed: $suite_name (arch=$ARCH) ===="
+        echo "==== single suite summary: suite=$suite_name total=1 passed=0 failed=1 ===="
         return 1
     fi
     ensure_busybox_helper "$suite_root"
     echo "==== running suite: $suite_name (arch=$ARCH) ===="
-    (
+    log_file="$(mktemp)"
+    if (
         cd "$suite_root"
         "./${suite_name}_testcode.sh"
-    )
+    ) 2>&1 | tee "$log_file"; then
+        rc=0
+    else
+        rc=$?
+    fi
+    print_single_suite_summary "$suite_name" "$log_file" "$script_file" "$rc"
+    rm -f "$log_file"
+    return "$rc"
 }
 
 run_all_suites() {

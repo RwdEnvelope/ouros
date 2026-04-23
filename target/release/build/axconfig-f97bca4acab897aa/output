@@ -1,0 +1,2 @@
+cargo:rerun-if-env-changed=AX_CONFIG_PATH
+cargo:rerun-if-changed=/home/reden/os_competition/ouros/.axconfig-riscv64.toml

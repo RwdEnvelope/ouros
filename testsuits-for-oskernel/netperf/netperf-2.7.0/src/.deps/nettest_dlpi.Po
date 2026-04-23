@@ -1,4 +1,5 @@
 nettest_dlpi.o: nettest_dlpi.c \
- /usr/riscv64-linux-gnu/include/stdc-predef.h ../config.h
-/usr/riscv64-linux-gnu/include/stdc-predef.h:
+ /home/reden/opt/riscv64-linux-musl-cross/riscv64-linux-musl/include/stdc-predef.h \
+ ../config.h
+/home/reden/opt/riscv64-linux-musl-cross/riscv64-linux-musl/include/stdc-predef.h:
 ../config.h:

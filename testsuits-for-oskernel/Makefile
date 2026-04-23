@@ -1,5 +1,9 @@
 DOCKER ?= docker.educg.net/cg/os-contest:20250614
 CODE_ROOT ?= $(CURDIR)
+RV_MUSL_PREFIX ?= $(shell sh -c 'for p in riscv64-linux-musl- riscv64-buildroot-linux-musl-; do command -v "$${p}gcc" >/dev/null 2>&1 && { printf "%s" "$$p"; exit 0; }; done')
+RV_GLIBC_PREFIX ?= riscv64-linux-gnu-
+LA_MUSL_PREFIX ?= $(shell sh -c 'for p in loongarch64-linux-musl-; do command -v "$${p}gcc" >/dev/null 2>&1 && { printf "%s" "$$p"; exit 0; }; done')
+LA_GLIBC_PREFIX ?= loongarch64-linux-gnu-
 
 all: sdcard
 
@@ -8,33 +12,79 @@ build-all: build-rv build-la
 build-rv:
 	make -f Makefile.sub clean
 	mkdir -p sdcard/riscv/musl
-	make -f Makefile.sub PREFIX=riscv64-buildroot-linux-musl- DESTDIR=$(CODE_ROOT)/sdcard/riscv/musl
-	cp /opt/riscv64--musl--bleeding-edge-2020.08-1/riscv64-buildroot-linux-musl/sysroot/lib/libc.so sdcard/riscv/musl/lib
+	@if [ -z "$(RV_MUSL_PREFIX)" ]; then \
+		echo "no usable riscv64 musl toolchain found; tried riscv64-linux-musl-gcc and riscv64-buildroot-linux-musl-gcc" >&2; \
+		exit 1; \
+	fi
+	make -f Makefile.sub PREFIX=$(RV_MUSL_PREFIX) DESTDIR=$(CODE_ROOT)/sdcard/riscv/musl
+	@mkdir -p sdcard/riscv/musl/lib
+	@libc_path="$$( $(RV_MUSL_PREFIX)gcc -print-file-name=libc.so )"; \
+	if [ "$$libc_path" = "libc.so" ] || [ ! -f "$$libc_path" ]; then \
+		libc_path="$$( $(RV_MUSL_PREFIX)gcc -print-file-name=lib/libc.so )"; \
+	fi; \
+	if [ "$$libc_path" = "lib/libc.so" ] || [ ! -f "$$libc_path" ]; then \
+		echo "unable to locate musl libc.so for $(RV_MUSL_PREFIX)" >&2; \
+		exit 1; \
+	fi; \
+	cp "$$libc_path" sdcard/riscv/musl/lib
 	sed -E -i 's/#### OS COMP TEST GROUP ([^ ]+) ([^ ]+) ####/#### OS COMP TEST GROUP \1 \2-musl ####/g' sdcard/riscv/musl/*_testcode.sh
 
 	make -f Makefile.sub clean
 	mkdir -p sdcard/riscv/glibc
-	make -f Makefile.sub PREFIX=riscv64-linux-gnu- DESTDIR=$(CODE_ROOT)/sdcard/riscv/glibc
-	cp /usr/riscv64-linux-gnu/lib/libc.so.6 sdcard/riscv/glibc/lib/libc.so
-	cp /usr/riscv64-linux-gnu/lib/libc.so.6 sdcard/riscv/glibc/lib/
-	cp /usr/riscv64-linux-gnu/lib/libm.so.6 sdcard/riscv/glibc/lib/libm.so
-	cp /usr/riscv64-linux-gnu/lib/libm.so.6 sdcard/riscv/glibc/lib/
-	cp /usr/riscv64-linux-gnu/lib/ld-linux-riscv64-lp64d.so.1 sdcard/riscv/glibc/lib/ld-linux-riscv64-lp64d.so.1
+	make -f Makefile.sub PREFIX=$(RV_GLIBC_PREFIX) DESTDIR=$(CODE_ROOT)/sdcard/riscv/glibc
+	@mkdir -p sdcard/riscv/glibc/lib
+	@libc_path="$$( $(RV_GLIBC_PREFIX)gcc -print-file-name=libc.so.6 )"; \
+	libm_path="$$( $(RV_GLIBC_PREFIX)gcc -print-file-name=libm.so.6 )"; \
+	ldso_path="$$( $(RV_GLIBC_PREFIX)gcc -print-file-name=ld-linux-riscv64-lp64d.so.1 )"; \
+	if [ "$$libc_path" = "libc.so.6" ] || [ ! -f "$$libc_path" ] || \
+	   [ "$$libm_path" = "libm.so.6" ] || [ ! -f "$$libm_path" ] || \
+	   [ "$$ldso_path" = "ld-linux-riscv64-lp64d.so.1" ] || [ ! -f "$$ldso_path" ]; then \
+		echo "unable to locate riscv64 glibc runtime libraries for $(RV_GLIBC_PREFIX)" >&2; \
+		exit 1; \
+	fi; \
+	cp "$$libc_path" sdcard/riscv/glibc/lib/libc.so; \
+	cp "$$libc_path" sdcard/riscv/glibc/lib/; \
+	cp "$$libm_path" sdcard/riscv/glibc/lib/libm.so; \
+	cp "$$libm_path" sdcard/riscv/glibc/lib/; \
+	cp "$$ldso_path" sdcard/riscv/glibc/lib/ld-linux-riscv64-lp64d.so.1
 	sed -E -i 's/#### OS COMP TEST GROUP ([^ ]+) ([^ ]+) ####/#### OS COMP TEST GROUP \1 \2-glibc ####/g' sdcard/riscv/glibc/*_testcode.sh
 
 build-la:
 	make -f Makefile.sub clean
 	mkdir -p sdcard/loongarch/musl
-	make -f Makefile.sub PREFIX=loongarch64-linux-musl- DESTDIR=$(CODE_ROOT)/sdcard/loongarch/musl
-	cp /opt/loongarch64-linux-musl-cross/loongarch64-linux-musl/lib/libc.so sdcard/loongarch/musl/lib
+	@if [ -z "$(LA_MUSL_PREFIX)" ]; then \
+		echo "no usable loongarch64 musl toolchain found; tried loongarch64-linux-musl-gcc" >&2; \
+		exit 1; \
+	fi
+	make -f Makefile.sub PREFIX=$(LA_MUSL_PREFIX) DESTDIR=$(CODE_ROOT)/sdcard/loongarch/musl
+	@mkdir -p sdcard/loongarch/musl/lib
+	@libc_path="$$( $(LA_MUSL_PREFIX)gcc -print-file-name=libc.so )"; \
+	if [ "$$libc_path" = "libc.so" ] || [ ! -f "$$libc_path" ]; then \
+		libc_path="$$( $(LA_MUSL_PREFIX)gcc -print-file-name=lib/libc.so )"; \
+	fi; \
+	if [ "$$libc_path" = "lib/libc.so" ] || [ ! -f "$$libc_path" ]; then \
+		echo "unable to locate musl libc.so for $(LA_MUSL_PREFIX)" >&2; \
+		exit 1; \
+	fi; \
+	cp "$$libc_path" sdcard/loongarch/musl/lib
 	sed -E -i 's/#### OS COMP TEST GROUP ([^ ]+) ([^ ]+) ####/#### OS COMP TEST GROUP \1 \2-musl ####/g' sdcard/loongarch/musl/*_testcode.sh
 
 	make -f Makefile.sub clean
 	mkdir -p sdcard/loongarch/glibc
-	make -f Makefile.sub PREFIX=loongarch64-linux-gnu- DESTDIR=$(CODE_ROOT)/sdcard/loongarch/glibc
-	cp /opt/gcc-13.2.0-loongarch64-linux-gnu/sysroot/usr/lib64/libc.so.6 sdcard/loongarch/glibc/lib
-	cp /opt/gcc-13.2.0-loongarch64-linux-gnu/sysroot/usr/lib64/libm.so.6 sdcard/loongarch/glibc/lib
-	cp /opt/gcc-13.2.0-loongarch64-linux-gnu/sysroot/usr/lib64/ld-linux-loongarch-lp64d.so.1 sdcard/loongarch/glibc/lib
+	make -f Makefile.sub PREFIX=$(LA_GLIBC_PREFIX) DESTDIR=$(CODE_ROOT)/sdcard/loongarch/glibc
+	@mkdir -p sdcard/loongarch/glibc/lib
+	@libc_path="$$( $(LA_GLIBC_PREFIX)gcc -print-file-name=libc.so.6 )"; \
+	libm_path="$$( $(LA_GLIBC_PREFIX)gcc -print-file-name=libm.so.6 )"; \
+	ldso_path="$$( $(LA_GLIBC_PREFIX)gcc -print-file-name=ld-linux-loongarch-lp64d.so.1 )"; \
+	if [ "$$libc_path" = "libc.so.6" ] || [ ! -f "$$libc_path" ] || \
+	   [ "$$libm_path" = "libm.so.6" ] || [ ! -f "$$libm_path" ] || \
+	   [ "$$ldso_path" = "ld-linux-loongarch-lp64d.so.1" ] || [ ! -f "$$ldso_path" ]; then \
+		echo "unable to locate loongarch64 glibc runtime libraries for $(LA_GLIBC_PREFIX)" >&2; \
+		exit 1; \
+	fi; \
+	cp "$$libc_path" sdcard/loongarch/glibc/lib; \
+	cp "$$libm_path" sdcard/loongarch/glibc/lib; \
+	cp "$$ldso_path" sdcard/loongarch/glibc/lib
 	sed -E -i 's/#### OS COMP TEST GROUP ([^ ]+) ([^ ]+) ####/#### OS COMP TEST GROUP \1 \2-glibc ####/g' sdcard/loongarch/glibc/*_testcode.sh
 
 sdcard: build-all .PHONY

@@ -1,0 +1,16 @@
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/axdriver-2206350fc9a3b3be.d: /home/reden/os_competition/ouros/arceos/modules/axdriver/src/lib.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/macros.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/bus/mod.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/bus/mmio.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/drivers.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/dummy.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/structs/mod.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/structs/static.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/virtio.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/prelude.rs
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libaxdriver-2206350fc9a3b3be.rlib: /home/reden/os_competition/ouros/arceos/modules/axdriver/src/lib.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/macros.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/bus/mod.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/bus/mmio.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/drivers.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/dummy.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/structs/mod.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/structs/static.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/virtio.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/prelude.rs
+
+/home/reden/os_competition/ouros/target/riscv64gc-unknown-none-elf/release/deps/libaxdriver-2206350fc9a3b3be.rmeta: /home/reden/os_competition/ouros/arceos/modules/axdriver/src/lib.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/macros.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/bus/mod.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/bus/mmio.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/drivers.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/dummy.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/structs/mod.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/structs/static.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/virtio.rs /home/reden/os_competition/ouros/arceos/modules/axdriver/src/prelude.rs
+
+/home/reden/os_competition/ouros/arceos/modules/axdriver/src/lib.rs:
+/home/reden/os_competition/ouros/arceos/modules/axdriver/src/macros.rs:
+/home/reden/os_competition/ouros/arceos/modules/axdriver/src/bus/mod.rs:
+/home/reden/os_competition/ouros/arceos/modules/axdriver/src/bus/mmio.rs:
+/home/reden/os_competition/ouros/arceos/modules/axdriver/src/drivers.rs:
+/home/reden/os_competition/ouros/arceos/modules/axdriver/src/dummy.rs:
+/home/reden/os_competition/ouros/arceos/modules/axdriver/src/structs/mod.rs:
+/home/reden/os_competition/ouros/arceos/modules/axdriver/src/structs/static.rs:
+/home/reden/os_competition/ouros/arceos/modules/axdriver/src/virtio.rs:
+/home/reden/os_competition/ouros/arceos/modules/axdriver/src/prelude.rs:

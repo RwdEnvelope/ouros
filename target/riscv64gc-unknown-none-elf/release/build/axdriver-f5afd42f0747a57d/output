@@ -1,0 +1,6 @@
+cargo:rustc-cfg=bus="mmio"
+cargo:rustc-cfg=block_dev="virtio-blk"
+cargo::rustc-check-cfg=cfg(bus, values("pci", "mmio"))
+cargo::rustc-check-cfg=cfg(net_dev, values("fxmac", "ixgbe", "virtio-net", "dummy"))
+cargo::rustc-check-cfg=cfg(block_dev, values("ramdisk", "bcm2835-sdhci", "virtio-blk", "dummy"))
+cargo::rustc-check-cfg=cfg(display_dev, values("virtio-gpu", "dummy"))
