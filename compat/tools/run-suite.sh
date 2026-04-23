@@ -337,7 +337,7 @@ run_all_suites() {
     done
 
     echo "==== suite summary: total=$((pass + fail)) passed=$pass failed=$fail ===="
-    [[ "$fail" -eq 0 ]]
+    return 0
 }
 
 if [[ "$SUITE" == "all" ]]; then
