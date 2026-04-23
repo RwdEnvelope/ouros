@@ -98,7 +98,9 @@ fn import_dir(
                 .read_link(path.as_str())
                 .map_err(|err| format!("read symlink {path}: {err}"))?;
             let link_target = format!("{}", link.display());
-            fs::write_file(&target, link_target.as_bytes())?;
+            // RamFS in the current runner path does not expose a symlink creation
+            // API, so preserve the link target in a sidecar file for now.
+            fs::write_file(&format!("{target}.symlink"), link_target.as_bytes())?;
             stats.symlinks += 1;
         } else if meta.file_type().is_regular_file() {
             let data = ext4
