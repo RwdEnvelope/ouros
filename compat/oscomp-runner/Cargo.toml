@@ -1,0 +1,14 @@
+[package]
+name = "oscomp-runner"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axstd = { path = "../../arceos/ulib/axstd", optional = true }
+axfs_vfs = "0.1"
+axfs_ramfs = "0.1"
+crate_interface = "0.3"
+ext4-view = { version = "0.9.3", default-features = false }
+
+[features]
+default = []
