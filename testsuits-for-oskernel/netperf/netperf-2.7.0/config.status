@@ -430,7 +430,7 @@ Copyright (C) 2021 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0'
+ac_pwd='/home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/usr/bin/mkdir -p'
@@ -651,12 +651,12 @@ S["mkdir_p"]="/usr/bin/mkdir -p"
 S["MKDIR_P"]="/usr/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]="riscv64-linux-musl-strip"
-S["install_sh"]="${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/install-sh"
-S["MAKEINFO"]="${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run makeinfo"
-S["AUTOHEADER"]="${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run autoheader"
-S["AUTOMAKE"]="${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run automake-1.11"
-S["AUTOCONF"]="${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run autoconf"
-S["ACLOCAL"]="${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run aclocal-1.11"
+S["install_sh"]="${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/install-sh"
+S["MAKEINFO"]="${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run makeinfo"
+S["AUTOHEADER"]="${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run autoheader"
+S["AUTOMAKE"]="${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run automake-1.11"
+S["AUTOCONF"]="${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run autoconf"
+S["ACLOCAL"]="${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run aclocal-1.11"
 S["VERSION"]="2.7.0"
 S["PACKAGE"]="netperf"
 S["CYGPATH_W"]="echo"

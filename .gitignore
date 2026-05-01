@@ -1,1 +1,11 @@
-disk-rv.imgdisk-rv.img
+target/
+kernel-rv
+kernel-la
+disk.img
+disk-rv.img
+disk-la.img
+disk-la-extra.img
+.axconfig-*.toml
+compat/oscomp-runner/oscomp-runner_*.elf
+compat/oscomp-runner/oscomp-runner_*.bin
+compat/oscomp-runner/oscomp-runner_*.uimg

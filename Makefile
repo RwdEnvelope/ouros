@@ -29,10 +29,9 @@ build-kernel:
 	fi
 	@rm -f "$(ROOT)"/compat/oscomp-runner/oscomp-runner_*.elf "$(ROOT)"/compat/oscomp-runner/oscomp-runner_*.bin "$(ROOT)/$(output)"
 	@"$(BUILD_RUNNER)" "$(arch)" build
-	@if [ "$(arch)" = "riscv64" ]; then ext=bin; else ext=elf; fi; \
-	src="$$(ls -t "$(ROOT)"/compat/oscomp-runner/oscomp-runner_*.$$ext 2>/dev/null | head -n 1)"; \
+	@src="$$(ls -t "$(ROOT)"/compat/oscomp-runner/oscomp-runner_*.elf 2>/dev/null | head -n 1)"; \
 	if [ -z "$$src" ]; then \
-		echo "unable to locate built $$ext image under compat/oscomp-runner/"; \
+		echo "unable to locate built elf image under compat/oscomp-runner/"; \
 		exit 1; \
 	fi; \
 	cp "$$src" "$(ROOT)/$(output)"; \

@@ -33,8 +33,15 @@ PATH: /home/reden/opt/x86_64-cross-tools-loongarch64/bin/
 PATH: /home/reden/opt/riscv64-linux-musl-cross/bin/
 PATH: /home/reden/opt/riscv64-linux-musl-cross/bin/
 PATH: /home/reden/.cursor-server/bin/linux-x64/fce1e9ab7844f9ea35793da01e634aa7e50bce90/bin/remote-cli/
+PATH: /home/reden/.local/bin/
+PATH: /home/reden/opt/cross-tools/bin/
+PATH: /home/reden/.local/bin/
+PATH: /home/reden/opt/x86_64-cross-tools-loongarch64/bin/
+PATH: /home/reden/opt/riscv64-linux-musl-cross/bin/
+PATH: /home/reden/opt/riscv64-linux-musl-cross/bin/
 PATH: /home/reden/.cursor-server/bin/linux-x64/fce1e9ab7844f9ea35793da01e634aa7e50bce90/bin/remote-cli/
 PATH: /home/reden/.cargo/bin/
+PATH: /home/reden/.local/bin/
 PATH: /usr/local/sbin/
 PATH: /usr/local/bin/
 PATH: /usr/sbin/
@@ -1668,7 +1675,7 @@ configure:6531: $? = 0
 configure:6531: result: yes
 configure:6537: checking for gethrtime
 configure:6537: riscv64-linux-musl-gcc -o conftest    conftest.c -lm  >&5
-/home/reden/opt/riscv64-linux-musl-cross/bin/../lib/gcc/riscv64-linux-musl/11.2.1/../../../../riscv64-linux-musl/bin/ld: /tmp/cccoIJLi.o: in function `main':
+/home/reden/opt/riscv64-linux-musl-cross/bin/../lib/gcc/riscv64-linux-musl/11.2.1/../../../../riscv64-linux-musl/bin/ld: /tmp/ccLmeBmg.o: in function `main':
 conftest.c:(.text+0x8): undefined reference to `gethrtime'
 collect2: error: ld returned 1 exit status
 configure:6537: $? = 1
@@ -1907,7 +1914,7 @@ configure:6705: checking for uname
 configure:6705: result: yes
 configure:6714: checking for mpctl
 configure:6714: riscv64-linux-musl-gcc -o conftest    conftest.c -lm  >&5
-/home/reden/opt/riscv64-linux-musl-cross/bin/../lib/gcc/riscv64-linux-musl/11.2.1/../../../../riscv64-linux-musl/bin/ld: /tmp/ccmMAaBn.o: in function `main':
+/home/reden/opt/riscv64-linux-musl-cross/bin/../lib/gcc/riscv64-linux-musl/11.2.1/../../../../riscv64-linux-musl/bin/ld: /tmp/ccjebgbb.o: in function `main':
 conftest.c:(.text+0x8): undefined reference to `mpctl'
 collect2: error: ld returned 1 exit status
 configure:6714: $? = 1
@@ -2046,7 +2053,7 @@ configure: failed program was:
 configure:6714: result: no
 configure:6720: checking for processor_bind
 configure:6720: riscv64-linux-musl-gcc -o conftest    conftest.c -lm  >&5
-/home/reden/opt/riscv64-linux-musl-cross/bin/../lib/gcc/riscv64-linux-musl/11.2.1/../../../../riscv64-linux-musl/bin/ld: /tmp/ccKblGnC.o: in function `main':
+/home/reden/opt/riscv64-linux-musl-cross/bin/../lib/gcc/riscv64-linux-musl/11.2.1/../../../../riscv64-linux-musl/bin/ld: /tmp/ccjNcBOG.o: in function `main':
 conftest.c:(.text+0x8): undefined reference to `processor_bind'
 collect2: error: ld returned 1 exit status
 configure:6720: $? = 1
@@ -2189,7 +2196,7 @@ configure:6726: $? = 0
 configure:6726: result: yes
 configure:6732: checking for bind_to_cpu_id
 configure:6732: riscv64-linux-musl-gcc -o conftest    conftest.c -lm  >&5
-/home/reden/opt/riscv64-linux-musl-cross/bin/../lib/gcc/riscv64-linux-musl/11.2.1/../../../../riscv64-linux-musl/bin/ld: /tmp/ccgCbjKd.o: in function `main':
+/home/reden/opt/riscv64-linux-musl-cross/bin/../lib/gcc/riscv64-linux-musl/11.2.1/../../../../riscv64-linux-musl/bin/ld: /tmp/ccOJGDLn.o: in function `main':
 conftest.c:(.text+0x8): undefined reference to `bind_to_cpu_id'
 collect2: error: ld returned 1 exit status
 configure:6732: $? = 1
@@ -2329,7 +2336,7 @@ configure: failed program was:
 configure:6732: result: no
 configure:6738: checking for bindprocessor
 configure:6738: riscv64-linux-musl-gcc -o conftest    conftest.c -lm  >&5
-/home/reden/opt/riscv64-linux-musl-cross/bin/../lib/gcc/riscv64-linux-musl/11.2.1/../../../../riscv64-linux-musl/bin/ld: /tmp/cckoFhdE.o: in function `main':
+/home/reden/opt/riscv64-linux-musl-cross/bin/../lib/gcc/riscv64-linux-musl/11.2.1/../../../../riscv64-linux-musl/bin/ld: /tmp/ccObhGAM.o: in function `main':
 conftest.c:(.text+0x8): undefined reference to `bindprocessor'
 collect2: error: ld returned 1 exit status
 configure:6738: $? = 1
@@ -2661,14 +2668,14 @@ curl_cv_socklen_t_equiv=unsigned
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run aclocal-1.11'
+ACLOCAL='${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run aclocal-1.11'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
 AMTAR='$${TAR-tar}'
-AUTOCONF='${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run autoconf'
-AUTOHEADER='${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run autoheader'
-AUTOMAKE='${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run automake-1.11'
+AUTOCONF='${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run autoconf'
+AUTOHEADER='${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run autoheader'
+AUTOMAKE='${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run automake-1.11'
 AWK='mawk'
 CC='riscv64-linux-musl-gcc'
 CCDEPMODE='depmode=gcc3'
@@ -2691,7 +2698,7 @@ LDFLAGS=''
 LIBOBJS=''
 LIBS='-lm '
 LTLIBOBJS=''
-MAKEINFO='${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run makeinfo'
+MAKEINFO='${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/missing --run makeinfo'
 MKDIR_P='/usr/bin/mkdir -p'
 NEED_LIBCOMPAT_FALSE=''
 NEED_LIBCOMPAT_TRUE='#'
@@ -2741,7 +2748,7 @@ host_vendor='unknown'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /home/reden/os_competition/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/install-sh'
+install_sh='${SHELL} /home/reden/os_competition/reasonableos2/ouros/testsuits-for-oskernel/netperf/netperf-2.7.0/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'
